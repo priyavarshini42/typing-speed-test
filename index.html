@@ -1,19 +1,85 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  </head>
-  <body>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Typing Speed Test Pro</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
     <div class="container">
-        <p class="greet">Hello</p>
-        <h1 class="main-head">Jane Doe</h1>
-        <div class="card-container">
-            
+
+        <h1>⌨ Typing Speed Test</h1>
+
+        <div class="stats">
+
+            <div class="box">
+                <h2 id="timer">60</h2>
+                <p>Seconds</p>
+            </div>
+
+            <div class="box">
+                <h2 id="wpm">0</h2>
+                <p>WPM</p>
+            </div>
+
+            <div class="box">
+                <h2 id="cpm">0</h2>
+                <p>CPM</p>
+            </div>
+
+            <div class="box">
+                <h2 id="accuracy">100%</h2>
+                <p>Accuracy</p>
+            </div>
+
+            <div class="box">
+                <h2 id="mistakes">0</h2>
+                <p>Mistakes</p>
+            </div>
+
         </div>
-            
+
+        <div class="progress">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <div class="paragraph" id="paragraph">
+            Loading...
+        </div>
+
+        <textarea id="input" placeholder="Start typing here..." autocomplete="off"></textarea>
+
+        <button id="restart">
+            Restart Test
+        </button>
+
     </div>
-  </body>
+
+    <!-- AUDIO -->
+
+    <audio id="typeSound">
+        <source src="sounds/type.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="correctSound">
+        <source src="sounds/correct.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="wrongSound">
+        <source src="sounds/wrong.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+
+</body>
+
 </html>
