@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ==========================
+   GLOBAL RESET
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ==========================
+   BODY
+========================== */
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #021024, #04264d, #063970, #0b4f9c);
+    background-size: 400% 400%;
+    animation: bgMove 12s ease infinite;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+@keyframes bgMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ==========================
+   MAIN CONTAINER
+========================== */
+
+.container {
+    width: 95%;
+    max-width: 950px;
+    background: rgba(255, 255, 255, .08);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, .15);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0 30px rgba(0, 162, 255, .35);
+}
+
+/* ==========================
+   TITLE
+========================== */
+
+h1 {
+    color: cyan;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 38px;
+    letter-spacing: 2px;
+}
+
+/* ==========================
+   STATS
+========================== */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.box {
+    background: rgba(255, 255, 255, .07);
+    padding: 18px;
+    border-radius: 15px;
+    text-align: center;
+    transition: .3s;
+    border: 1px solid rgba(255, 255, 255, .1);
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 18px cyan;
+}
+
+.box h2 {
+    font-size: 28px;
+    color: #6dfcff;
+    margin-bottom: 8px;
+}
+
+.box p {
+    font-size: 14px;
+    color: #d9e8ff;
+}
+
+/* ==========================
+   PROGRESS BAR
+========================== */
+
+.progress {
+    width: 100%;
+    height: 14px;
+    background: #00152d;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #00d4ff, #00ff9d);
+    transition: .3s;
+}
+
+/* ==========================
+   PARAGRAPH
+========================== */
+
+.paragraph {
+    background: #07192f;
+    border-radius: 15px;
+    padding: 25px;
+    line-height: 2;
+    font-size: 20px;
+    border: 1px solid #0f4b8d;
+    margin-bottom: 25px;
+    min-height: 180px;
+}
+
+/* ==========================
+   TEXT COLORS
+========================== */
+
+.correct {
+    color: #5cff7d;
+}
+
+.wrong {
+    color: #ff5757;
+    text-decoration: underline;
+}
+
+.active {
+    background: #00d4ff;
+    color: black;
+    border-radius: 4px;
+    padding: 2px;
+}
+
+/* ==========================
+   INPUT
+========================== */
+
+textarea {
+    width: 100%;
+    height: 140px;
+    resize: none;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    padding: 18px;
+    font-size: 19px;
+    background: #041427;
+    color: white;
+    border: 2px solid #0f4b8d;
+    transition: .3s;
+}
+
+textarea:focus {
+    border-color: #00d4ff;
+    box-shadow: 0 0 20px cyan;
+}
+
+/* ==========================
+   BUTTON
+========================== */
+
+button {
+    cursor: pointer;
+}
+
+#restart {
+    margin-top: 20px;
+    padding: 15px 45px;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #009dff, #00ffd5);
+    color: #001122;
+    font-weight: bold;
+    transition: .3s;
+    display: block;
+    margin: 20px auto 0;
+}
+
+#restart:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px cyan;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+
+@media(max-width:768px) {
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .box h2 {
+        font-size: 22px;
+    }
+
+    textarea {
+        height: 120px;
+        font-size: 16px;
+    }
+}
